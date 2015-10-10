@@ -69,4 +69,22 @@ class SingleLinkedList():
 			head = newNode
 		newNode.next = current
 		
+		return head
+
+	def Delete(self, head, position):
+		if head == None:
+			return
+		index = 0
+		current = head
+		prev = None
+		while index < position:
+			index = index + 1
+			prev = current
+			current = current.next
+		
+		if prev == None:
+			head = current.next
+			current.next = None
+		else:
+			prev.next = current.next
 		return head			

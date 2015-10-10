@@ -59,4 +59,23 @@ class SingleLinkedListTestCase(unittest.TestCase):
 		head = self.list.InsertAtPosition(head, 5, 0)
 
 		assert head.data == 5
+	
+	def test_delete_deletes_a_node_at_specified_position_from_non_empty_list(self):
+		head = None
+		head = self.list.InsertAtTail(head, 1)
+		self.list.InsertAtTail(head, 2)
+		self.list.InsertAtTail(head, 3)
+	
+		head = self.list.Delete(head, 1)
 
+		assert head.next.data == 3
+
+	def test_delete_deletes_a_node_from_zero_position(self):
+		head = None
+		head = self.list.InsertAtTail(head, 1)
+		self.list.InsertAtTail(head, 2)
+		self.list.InsertAtTail(head, 3)
+
+		head = self.list.Delete(head, 0)
+		
+		assert head.data == 2
