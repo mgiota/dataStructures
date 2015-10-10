@@ -14,8 +14,21 @@ def printList(head):
 
 	return head
 
+def InsertAtTail(head, data):
+	newNode = Node()
+	newNode.data = data
 
-head = Node()
+	if head == None:
+		head = newNode
+	else:
+		current = head
+		while current.next != None:
+			current = current.next
+		current.next = newNode
+	return head
+	
+#TODO: Write Unit tests asap to test my cases
+"""head = Node()
 head.data = 1
 
 second = Node()
@@ -24,6 +37,12 @@ head.next = second
 
 third = Node()
 third.data = 3
-second.next = third
+second.next = third"""
 
+
+head = None
+head = InsertAtTail(head, 1)
+InsertAtTail(head, 2)
+InsertAtTail(head, 3)
+InsertAtTail(head, 4)
 printList(head) 
