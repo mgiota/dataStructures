@@ -38,3 +38,13 @@ class SingleLinkedList():
 				current = current.next
 			current.next = newNode
 		return head
+
+	def InsertAtHead(self, head, data):
+		if head == None:
+			head = self.InsertAtTail(head, data)
+			return head
+		newNode = Node()
+		newNode.data = data
+		newNode.next = head
+		head = newNode
+		return head

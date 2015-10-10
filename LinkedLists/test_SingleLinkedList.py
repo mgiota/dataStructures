@@ -23,3 +23,19 @@ class SingleLinkedListTestCase(unittest.TestCase):
 		self.list.InsertAtTail(head, 4)
 		
 		assert self.list.Count(head) == 4	
+
+	def test_insertAtHead_should_add_node_to_empty_list(self):
+		head = None
+
+		head = self.list.InsertAtHead(head, 1)
+
+		assert head.data == 1
+
+	def test_insertAtHead_should_add_nodes_to_non_empty_list(self):
+		head = None
+		head = self.list.InsertAtHead(head, 1)
+		head = self.list.InsertAtHead(head, 2)
+		head = self.list.InsertAtHead(head, 3)
+		head = self.list.InsertAtHead(head, 4)
+
+		assert self.list.Count(head) == 4
