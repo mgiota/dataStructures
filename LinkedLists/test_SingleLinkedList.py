@@ -79,3 +79,14 @@ class SingleLinkedListTestCase(unittest.TestCase):
 		head = self.list.Delete(head, 0)
 		
 		assert head.data == 2
+
+	def test_reverse_reverses_a_non_empty_list(self):
+		head = None
+		head = self.list.InsertAtTail(head, 1)
+		self.list.InsertAtTail(head, 2)
+		self.list.InsertAtTail(head, 3)
+		self.list.InsertAtTail(head, 4)
+
+		head = self.list.Reverse(head, None)
+
+		assert head.data == 4

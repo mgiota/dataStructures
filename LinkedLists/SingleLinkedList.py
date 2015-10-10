@@ -93,4 +93,13 @@ class SingleLinkedList():
 		if head == None:
 			return
 		self.ReversePrint(head.next)
-		print head.data			
+		print head.data		
+
+	def Reverse(self, head, prev):
+		if head == None:
+			return prev
+		current = head.next
+		head.next = prev
+		return self.Reverse(current, head)
+		
+			
