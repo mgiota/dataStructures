@@ -87,4 +87,10 @@ class SingleLinkedList():
 			current.next = None
 		else:
 			prev.next = current.next
-		return head			
+		return head
+
+	def ReversePrint(self, head):
+		if head == None:
+			return
+		self.ReversePrint(head.next)
+		print head.data			
