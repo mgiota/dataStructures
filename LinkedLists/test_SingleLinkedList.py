@@ -39,3 +39,24 @@ class SingleLinkedListTestCase(unittest.TestCase):
 		head = self.list.InsertAtHead(head, 4)
 
 		assert self.list.Count(head) == 4
+
+	def test_insertAtPosition_add_node_to_non_empty_list(self):
+		head = None
+		head = self.list.InsertAtTail(head, 1)
+		self.list.InsertAtTail(head, 2)
+		self.list.InsertAtTail(head, 3)
+
+		self.list.InsertAtPosition(head, 5, 2)
+		
+		assert head.next.next.data == 5
+
+	def test_insertAtPosition_add_node_to_position_zero_in_non_empty_list(self):
+		head = None
+		head = self.list.InsertAtTail(head, 1)
+		self.list.InsertAtTail(head, 2)
+		self.list.InsertAtTail(head, 3)
+
+		head = self.list.InsertAtPosition(head, 5, 0)
+
+		assert head.data == 5
+

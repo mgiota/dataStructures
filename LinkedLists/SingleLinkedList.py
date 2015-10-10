@@ -48,3 +48,25 @@ class SingleLinkedList():
 		newNode.next = head
 		head = newNode
 		return head
+
+	def InsertAtPosition(self, head, data, position):
+		newNode = Node()
+		newNode.data = data
+
+		if head == None:
+			head = newNode
+			return head
+		index = 0
+		current = head
+		prev = None
+		while index < position:
+			index = index + 1
+			prev = current
+			current = current.next
+		if prev != None:
+			prev.next = newNode
+		else:
+			head = newNode
+		newNode.next = current
+		
+		return head			
