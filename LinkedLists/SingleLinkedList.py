@@ -102,4 +102,19 @@ class SingleLinkedList():
 		head.next = prev
 		return self.Reverse(current, head)
 		
-			
+
+	def CompareLists(self, headA, headB):
+		if (headA == None and headB != None) or (headB == None and headA != None):
+			return 0
+		if headA == None and headB == None:
+			return 1
+
+		while headA != None and headB != None:
+			if headA.data != headB.data:
+				return 1
+			headA = headA.next
+			headB = headB.next
+		if headA == None and headB == None:
+			return 1
+		else:
+			return 0
