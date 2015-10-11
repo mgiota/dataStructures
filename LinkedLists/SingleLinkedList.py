@@ -182,3 +182,16 @@ class SingleLinkedList():
 				prev = current
 				current = current.next
 		return head
+
+	def HasCycle(head):
+    		fast = head.next
+    		slow = head
+    		while True:
+        		if fast == None or fast.next == None:
+            			return 0
+        		elif fast == slow or fast.next == slow:
+            			return 1
+        		else:
+            			slow = slow.next
+            			fast = fast.next.next
+           
