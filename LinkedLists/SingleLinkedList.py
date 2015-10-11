@@ -118,3 +118,40 @@ class SingleLinkedList():
 			return 1
 		else:
 			return 0
+
+	def MergeLists(self, headA, headB):
+		if headA == None and headB != None:
+        		return headB
+    		if headB == None and headA != None:
+        		return headA
+    		if headA == None and headB == None:
+        		return
+    
+    		result = None
+    		resultHead = None
+   		while headA != None or headB != None:
+        		if result == None:
+            			if headA.data < headB.data:
+                			result = headA
+                			resultHead = headA
+                			headA = headA.next
+            			else:
+               				result = headB
+                			resultHead = headB
+                			headB = headB.next
+        		else:
+            			if headA == None and headB != None:
+                			result.next = headB
+                			headB = headB.next
+            		elif headB == None and headA != None:
+                		result.next = headA
+                		headA = headA.next
+            		elif headA.data < headB.data:
+                		result.next = headA
+                		headA = headA.next
+            		else:
+                		result.next = headB
+                		headB = headB.next
+            		result = result.next
+                
+    		return resultHead
