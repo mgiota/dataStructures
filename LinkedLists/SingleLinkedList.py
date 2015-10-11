@@ -168,3 +168,17 @@ class SingleLinkedList():
         		i = i + 1
     
     		return arr[i - 1 - position]
+
+	def RemoveDuplicates(self, head):
+		if head == None:
+			return
+		prev = head
+		current = head.next
+		while current != None:
+			if current.data == prev.data:
+				prev.next = current.next
+				current = current.next
+			else:
+				prev = current
+				current = current.next
+		return head
