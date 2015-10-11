@@ -155,3 +155,16 @@ class SingleLinkedList():
             		result = result.next
                 
     		return resultHead
+
+	def GetNode(self, head, position):
+    		if head == None:
+        		return
+    		arr = []
+    		arr.append(head.data)
+    		i = 1
+    		while head != None:
+        		arr.append(head.data)
+        		head = head.next
+        		i = i + 1
+    
+    		return arr[i - 1 - position]
