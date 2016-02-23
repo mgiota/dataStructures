@@ -10,3 +10,14 @@ py.test
 
 ## Data structures in Javascript
 * Arrays
+
+### Unit tests
+To run unit tests navigate to the specific Javascript folder (for example Arrays) and run following:
+````
+mocha test
+````
+
+If chai is not globally installed, then you need to run:
+````
+npm install chai
+````
