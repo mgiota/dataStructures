@@ -49,3 +49,10 @@ exports.insertDashes = function(input) {
 
   return result;
 };
+
+exports.sort = function(arr) {
+  function sortNumeric(a, b) {
+    return a - b;
+  }
+  return arr.sort(sortNumeric);
+}

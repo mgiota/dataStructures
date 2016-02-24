@@ -142,3 +142,12 @@ describe('insertDashes', function() {
     expect(actual).to.equal(expected);
   });
 });
+
+describe('sort', function() {
+  var arr = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ],
+      expected = [ -4, -3, 1, 2, 3, 5, 6, 7, 8],
+      actual = arrays.sort(arr),
+      result = arraysEqual(expected, actual);
+      console.log(actual)
+  expect(result).to.equal(true);
+});
