@@ -106,3 +106,21 @@ describe('getLastNElements', function() {
     expect(result).to.equal(true);   
   });
 });
+
+describe('joinArrayElemsToString', function() {
+  it('should join array elems into string using default comma', function() {
+    var arr = ["apple", "banana", "orange"],
+        expected = "apple,banana,orange",
+        actual = arrays.joinArrayElemsToString(arr);
+
+    expect(actual).to.equal(expected);
+  });
+
+  it('should join array elems into string using custom symbol', function() {
+    var arr = ["apple", "banana", "orange"],
+        expected = "apple+banana+orange",
+        actual = arrays.joinArrayElemsToString(arr, '+');
+
+    expect(actual).to.equal(expected);
+  });
+});
