@@ -124,3 +124,21 @@ describe('joinArrayElemsToString', function() {
     expect(actual).to.equal(expected);
   });
 });
+
+describe('insertDashes', function() {
+  it('should insert a dash between each character', function() {
+    var input = '02468',
+        expected = '0-2-4-6-8',
+        actual = arrays.insertDashes(input);
+
+    expect(actual).to.equal(expected);
+  });
+
+  it('should insert a dash between even characters', function() {
+    var input = '025468',
+        expected = '0-254-6-8',
+        actual = arrays.insertDashes(input);
+
+    expect(actual).to.equal(expected);
+  });
+});

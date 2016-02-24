@@ -36,4 +36,16 @@ exports.getLastNElements = function(arr, n) {
 exports.joinArrayElemsToString = function(arr, s) {
   //or arr.toString()
   return arr.join(s);   
-}
+};
+
+exports.insertDashes = function(input) {
+  var result = input[0];
+  for(var i = 1; i < input.length; i++) {
+    if(input[i] % 2 === 0 && input[i-1] % 2 === 0) {
+      result+= '-';
+    }
+    result+= input[i];
+  }
+
+  return result;
+};
