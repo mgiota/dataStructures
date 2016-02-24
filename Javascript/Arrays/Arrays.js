@@ -22,3 +22,13 @@ exports.getFirstNElements = function(arr, n) {
 
   return arr.slice(0, n);
 };
+
+exports.getLastNElements = function(arr, n) {
+  if (arr === null) {
+    return void 0;
+  }
+  if(n === undefined) {
+    return arr[arr.length - 1];
+  }
+  return arr.slice(Math.max(arr.length - n, 0));
+};

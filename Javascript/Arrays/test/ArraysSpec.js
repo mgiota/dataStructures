@@ -79,3 +79,30 @@ describe('getFirstNElements', function() {
     expect(result).to.equal(true);
   });
 });
+
+describe('getLastNElements', function() {
+  it('should return last element if no n parameter is passed', function() {
+    var arr = [7, 9, 0, -2];
+
+    expect(arrays.getLastNElements(arr)).to.equal(-2);
+  });
+
+  it('should return last n elements', function() {
+    var arr = [7, 9, 0, -2],
+        expected = [9, 0, -2],
+        actual = arrays.getLastNElements(arr, 3),
+        result = arraysEqual(expected, actual);
+
+    expect(result).to.equal(true);
+  });
+
+  it('should return whole array if n is bigger than array length', function() {
+    var arr = [7, 9, 0, -2],
+        expected = [7, 9, 0, -2],
+        actual = arrays.getLastNElements(arr, 6),
+        result = arraysEqual(expected, actual);
+        console.log(actual);
+
+    expect(result).to.equal(true);   
+  });
+});
