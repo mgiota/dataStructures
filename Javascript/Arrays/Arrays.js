@@ -137,3 +137,19 @@ exports.sumSquares = function(arr) {
   }
   return sum;
 };
+
+exports.sum = function(arr) {
+  var sum = 0;
+  for(var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+};
+
+exports.product = function(arr) {
+  var product = 1;
+  for(var i = 0; i < arr.length; i++) {
+    product *= arr[i];
+  }
+  return product;
+};

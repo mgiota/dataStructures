@@ -193,3 +193,19 @@ describe('sumSquares', function() {
     expect(arrays.sumSquares(a)).to.equal(30);
   });
 });
+
+describe('sum', function() {
+  it('should return the sum of the array', function() {
+    var arr = [1, 2, 3, 4, 5, 6];
+    
+    expect(arrays.sum(arr)).to.equal(21);
+  });
+});
+
+describe('product', function() {
+  it('should return the product of the array', function() {
+    var arr = [1, 2, 3, 4, 5, 6];
+    
+    expect(arrays.product(arr)).to.equal(720);
+  });
+});
