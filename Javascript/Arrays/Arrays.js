@@ -85,3 +85,25 @@ exports.selectionSort = function(arr) {
   }
   return arr;
 };
+
+exports.findMostFrequentItem = function(arr) {
+  var frequencies = {};
+  for(var i = 0; i < arr.length; i++) {
+    if(frequencies[arr[i]] === undefined) {
+      frequencies[arr[i]] = 1;
+    } else {
+      frequencies[arr[i]] += 1
+    }
+  }
+
+  var maxFreq = 0,
+      maxItem;
+  for(var i in frequencies) {
+    if(frequencies[i] > maxFreq) {
+      maxFreq = frequencies[i];
+      maxItem = i;
+    }
+  }
+
+  return maxItem;
+};

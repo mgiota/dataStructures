@@ -160,3 +160,11 @@ describe('selectionSort', function() {
     expect(result).to.equal(true);
   });
 });
+
+describe('findMostFrequentItem', function() {
+  it('should find most frequent item of an array', function() {
+    var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    //console.log(arrays.findMostFrequentItem(arr))
+    expect(arrays.findMostFrequentItem(arr)).to.equal('a');
+  });
+});
