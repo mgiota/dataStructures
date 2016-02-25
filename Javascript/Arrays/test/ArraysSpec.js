@@ -168,3 +168,13 @@ describe('findMostFrequentItem', function() {
     expect(arrays.findMostFrequentItem(arr)).to.equal('a');
   });
 });
+
+describe('swapCase', function() {
+  it('should swap case of each character', function() {
+    var text = "This Is A SenTense"
+        expected = "tHIS iS a sENtENSE",
+        actual = arrays.swapCase(text);
+
+    expect(actual).to.equal(expected);
+  });
+});
