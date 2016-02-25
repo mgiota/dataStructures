@@ -119,3 +119,13 @@ exports.swapCase = function(text) {
   }
   return result;
 };
+
+exports.printArray = function(arr) {
+  for(var i = 0; i < arr.length; i++) {
+    var row = arr[i];
+    console.log("Row " + i + '\n');
+    for(var j = 0; j < row.length; j++) {
+      console.log(row[j] + '\n');
+    }
+  }
+};
