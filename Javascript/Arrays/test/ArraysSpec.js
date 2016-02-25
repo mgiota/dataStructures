@@ -101,7 +101,6 @@ describe('getLastNElements', function() {
         expected = [7, 9, 0, -2],
         actual = arrays.getLastNElements(arr, 6),
         result = arraysEqual(expected, actual);
-        console.log(actual);
 
     expect(result).to.equal(true);   
   });
@@ -150,4 +149,14 @@ describe('sort', function() {
       result = arraysEqual(expected, actual);
       console.log(actual)
   expect(result).to.equal(true);
+});
+
+describe('selectionSort', function() {
+  it('should sort array using selectionSort', function() {
+    var arr = [32, 4, 5, 1, 2, 6, 3, 11],
+        expected = [1, 2, 3, 4, 5, 6, 11, 32],
+        actual = arrays.selectionSort(arr),
+        result = arraysEqual(expected, actual);
+    expect(result).to.equal(true);
+  });
 });

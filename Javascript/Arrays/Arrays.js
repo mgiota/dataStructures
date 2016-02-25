@@ -55,4 +55,33 @@ exports.sort = function(arr) {
     return a - b;
   }
   return arr.sort(sortNumeric);
+};
+
+function swap(arr, firstIndex, secondIndex) {
+  var temp = arr[firstIndex];
+  arr[firstIndex] = arr[secondIndex];
+  arr[secondIndex] = temp;
 }
+
+function indexOfMinimum(arr, startIndex) {
+  var minIndex = startIndex,
+      minValue = arr[startIndex];
+
+  for(var i=startIndex + 1; i < arr.length; i++) {
+    if (arr[i] < minValue) {
+      minValue = arr[i];
+      minIndex = i;
+    }
+  }
+
+  return minIndex; 
+}
+
+exports.selectionSort = function(arr) {
+  var minIndex;
+  for(var i = 0; i < arr.length; i++) {
+    minIndex = indexOfMinimum(arr, i);
+    swap(arr, i, minIndex);
+  }
+  return arr;
+};
