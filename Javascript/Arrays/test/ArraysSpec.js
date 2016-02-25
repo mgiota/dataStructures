@@ -185,3 +185,11 @@ describe('printArray', function() {
     arrays.printArray(a);
   });
 });
+
+describe('sumSquares', function() {
+  it('should sum the squares of an array', function() {
+    var a = [0, 1, 2, 3, 4];
+
+    expect(arrays.sumSquares(a)).to.equal(30);
+  });
+});
