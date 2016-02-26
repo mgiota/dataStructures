@@ -153,3 +153,46 @@ exports.product = function(arr) {
   }
   return product;
 };
+
+exports.removeDuplicates = function(arr) {
+  var uniqueArr = arr.filter(function(elem, index) {
+    return arr.indexOf(elem) === index;
+  });
+
+  return uniqueArr;
+};
+
+exports.removeDuplicates2 = function(arr) {
+  var len = arr.length,
+      tail = 1,
+      j;
+  for(var i = 1; i < len; i++) {
+    for(j = 0; j < tail; j++) {
+      if(arr[i] === arr[j]) {
+        break;
+      }
+    }
+
+    if(j === tail) {
+      arr[tail] = arr[i];
+      tail++;
+    }
+  }
+
+  return arr.slice(0, tail);
+};
+
+exports.removeDuplicates3 = function(arr) {
+  var result = [],
+      obj = {};
+
+  for(var i = 0; i < arr.length; i++) {
+    obj[arr[i]] = 0;
+  }
+
+  for(var i in obj) {
+    result.push(i);
+  }
+
+  return result;
+};

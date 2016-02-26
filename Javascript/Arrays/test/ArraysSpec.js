@@ -147,7 +147,7 @@ describe('sort', function() {
       expected = [ -4, -3, 1, 2, 3, 5, 6, 7, 8],
       actual = arrays.sort(arr),
       result = arraysEqual(expected, actual);
-      console.log(actual)
+      //console.log(actual)
   expect(result).to.equal(true);
 });
 
@@ -207,5 +207,34 @@ describe('product', function() {
     var arr = [1, 2, 3, 4, 5, 6];
     
     expect(arrays.product(arr)).to.equal(720);
+  });
+});
+
+describe('removeDuplicates', function() {
+  it('should remove duplicates from array', function() {
+    var arr = [2, 3, 4, 5, 3, 3, 2, 1, 9, 4, 4, 5];
+    var uniqueArr = arrays.removeDuplicates(arr);
+    //console.log(uniqueArr);
+    expect(uniqueArr.length).to.equal(6);
+  });
+});
+
+describe('removeDuplicates2', function() {
+  it('should remove duplicates from an array in place', function() {
+    var arr = [2, 3, 2, 4, 6, 4, 3, 2, 2, 1],
+      actual = arrays.removeDuplicates2(arr),
+      expected = [2, 3, 4, 6, 1],
+      result = arraysEqual(actual, expected);
+  
+    expect(result).to.equal(true);
+  });
+});
+
+describe('removeDuplicates3', function() {
+  it('should remove duplicates from array #3', function() {
+    var arr = [2, 3, 2, 4, 6, 4, 3, 2, 2, 1],
+      actual = arrays.removeDuplicates3(arr);
+  
+    expect(actual.length).to.equal(5);
   });
 });
