@@ -238,3 +238,11 @@ describe('removeDuplicates3', function() {
     expect(actual.length).to.equal(5);
   });
 });
+
+describe('ordinalNumbers', function() {
+  it('should console array using ordinal numbers', function() {
+    var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];  
+
+    arrays.ordinalNumbers(color);
+  });
+});

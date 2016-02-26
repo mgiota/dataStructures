@@ -196,3 +196,15 @@ exports.removeDuplicates3 = function(arr) {
 
   return result;
 };
+
+exports.ordinalNumbers = function(arr) {
+    function Ordinal(n) {
+      var o = ['th', 'st', 'nd', 'rd'];
+      return n + (o[(n%10)] || o[0]);
+    }
+
+    for(var i = 0; i < arr.length; i++) {
+      var ordinal = i + 1;
+      console.log(Ordinal(ordinal) + " choice is " + arr[i] + ".");
+    }
+};
