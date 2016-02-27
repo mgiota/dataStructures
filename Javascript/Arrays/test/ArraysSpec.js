@@ -437,3 +437,16 @@ describe('removeFalsyValues', function() {
     expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('sortArrayOfObjects', function() {
+  it('should sort array of objects by title', function() {
+    var library = [ 
+      { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+      { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+      { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+    ];
+
+    var sorted = arrays.sortArrayOfObjects(library);
+    console.log(sorted);
+  });
+});

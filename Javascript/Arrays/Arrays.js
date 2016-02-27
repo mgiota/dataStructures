@@ -436,3 +436,17 @@ exports.removeFalsyValues = function(arr) {
 
   return res;
 };
+
+exports.sortArrayOfObjects = function(arr) {
+  /*
+  * ascending order
+  **/
+  function byTitle(a, b) {
+    if (a.title < b.title) { return -1; }
+    if(a.title > b.title) { return 1; }
+    
+    return 0;
+  }
+
+  return arr.sort(byTitle);
+};
