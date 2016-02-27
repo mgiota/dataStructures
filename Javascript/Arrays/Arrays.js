@@ -208,3 +208,23 @@ exports.ordinalNumbers = function(arr) {
       console.log(Ordinal(ordinal) + " choice is " + arr[i] + ".");
     }
 };
+
+// Fisher-Yates (Knuth) Shuffle
+exports.shuffle = function(arr) {
+  function swap(arr, firstIndex, secondIndex) {
+    var temp = arr[firstIndex];
+    arr[firstIndex] = arr[secondIndex];
+    arr[secondIndex] = temp;
+  }
+
+  var currIndex = arr.length,
+      randomIndex;
+
+  while(currIndex > 0) {
+    randomIndex = Math.floor(Math.random()*currIndex);
+    currIndex--;
+    swap(arr, currIndex, randomIndex);
+  }
+
+  return arr;
+};

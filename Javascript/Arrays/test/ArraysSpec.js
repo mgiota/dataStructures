@@ -246,3 +246,11 @@ describe('ordinalNumbers', function() {
     arrays.ordinalNumbers(color);
   });
 });
+
+describe('shuffle', function() {
+  it('should shuffle an array', function() {
+    var arr = [1, 2, 3, 4, 5, 6, 7];
+    var shuffled = arrays.shuffle(arr);
+    console.log(shuffled);
+  });
+});
