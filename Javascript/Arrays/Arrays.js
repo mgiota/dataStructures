@@ -356,3 +356,11 @@ exports.flattenNestedArr = function(arr, shallow, res) {
 exports.findMaxOfArray = function(arr) {
   return Math.max.apply(null, arr);
 };
+
+exports.fillHoles = function() {
+  function returnArgs() {
+    return Array.prototype.slice.call(arguments);
+  }
+
+  return returnArgs.apply(null, [1,,2]);
+};

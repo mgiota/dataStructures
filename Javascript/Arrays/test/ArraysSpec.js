@@ -377,3 +377,9 @@ describe('findMaxOfArray', function() {
     expect(arrays.findMaxOfArray(arr)).to.equal(434);
   });
 });
+
+describe('fillHoles', function() {
+  it('should fillHoles', function() {
+    console.log(arrays.fillHoles());
+  });
+});
