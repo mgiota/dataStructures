@@ -521,3 +521,9 @@ describe('move2', function() {
     console.log(arrays.move2([10, 20, 30, 40, 50], 0, 2));
   });
 });
+
+describe('prefillStringArray', function() {
+  it('should prefill array with default string value', function() {
+    console.log(arrays.prefillStringArray(5, "test"));
+  });
+});

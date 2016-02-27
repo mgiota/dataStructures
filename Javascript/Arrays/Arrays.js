@@ -551,3 +551,7 @@ exports.move2 = function(arr, pos1, pos2) {
   arr.splice(pos2, 0, arr.splice(pos1, 1)[0]);
   return arr;
 };
+
+exports.prefillStringArray = function(n, val) {
+  return Array.apply(null, Array(n)).map(String.prototype.valueOf, val);
+};
