@@ -228,3 +228,39 @@ exports.shuffle = function(arr) {
 
   return arr;
 };
+
+
+/*
+* Earth rotates about 365.242375 times a year
+*/
+exports.isLeapYear = function(year) {
+  if (year % 4 !== 0) {
+    return false;
+  } else {
+    if(year % 100 !== 0) {
+      return true;
+    } else {
+      if (year % 400 === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
+
+exports.leapYearRange = function(start, end) {
+  var yearRange = [],
+      leapYears = [];
+  for(var i = start; i <= end; i++) {
+    yearRange.push(i);
+  }
+
+  yearRange.forEach(function(year) {
+    if(exports.isLeapYear(year)) {
+      leapYears.push(year);
+    }
+  });
+
+  return leapYears;
+};

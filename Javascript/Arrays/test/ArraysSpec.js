@@ -254,3 +254,21 @@ describe('shuffle', function() {
     console.log(shuffled);
   });
 });
+
+describe('isLeapYear', function() {
+  it('should return if a year is leap year or not', function() {
+    expect(arrays.isLeapYear(1997)).to.equal(false);
+    expect(arrays.isLeapYear(2012)).to.equal(true);
+    expect(arrays.isLeapYear(2000)).to.equal(true);
+    expect(arrays.isLeapYear(2100)).to.equal(false);
+  });
+});
+
+describe('leapYearRange', function() {
+  it('should return leap years within a year range', function() {
+    var expected = [2000, 2004, 2008, 2012],
+        actual = arrays.leapYearRange(2000, 2012);
+    
+    expect(arraysEqual(expected, actual)).to.equal(true);
+  }); 
+});
