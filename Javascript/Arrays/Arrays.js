@@ -483,3 +483,15 @@ exports.complementaryPairs = function(arr, sum) {
 
   return count;
 };
+
+exports.longestCommonSubstring = function(arr) {
+  var arr1 = arr.concat().sort(),
+      a1 = arr1[0],
+      L = a1.length,
+      a2 = arr1[arr1.length - 1],
+      i = 0;
+
+  while (i < L && a1.charAt(i) === a2.charAt(i)) i++;
+
+  return a1.substring(0, i); 
+};

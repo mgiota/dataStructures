@@ -472,3 +472,13 @@ describe('complementaryPairs', function() {
     expect(arrays.complementaryPairs(arr, 6)).to.equal(7);
   });
 });
+
+describe('longestCommonSubstring', function() {
+  it('should return the longest common starting substring in a set of strings', function() {
+    var arr = ['google', 'go'],
+        actual = arrays.longestCommonSubstring(arr),
+        expected = 'go';
+
+    expect(actual).to.equal(expected);
+  });
+});
