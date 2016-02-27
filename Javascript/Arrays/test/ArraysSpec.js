@@ -550,3 +550,15 @@ describe('mergeArrays', function() {
   expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('removeElement', function() {
+  it('should remove an element from an array', function() {
+    console.log(arrays.removeElement([2, 5, 9, 6], 5));
+  });
+});
+
+describe('removeElement2', function() {
+  it('should remove an element from an array', function() {
+    console.log(arrays.removeElement2([2, 5, 9, 6], 5));
+  });
+});
