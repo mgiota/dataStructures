@@ -423,3 +423,16 @@ exports.difference2 = function(arr1, arr2) {
     return arr2.indexOf(elem) < 0;
   });
 };
+
+exports.removeFalsyValues = function(arr) {
+  var res = [],
+      index = 0;
+  for(var i = 0; i < arr.length; i++) {
+    var value = arr[i];
+    if(value) {
+      res.push(value);
+    }
+  }
+
+  return res;
+};

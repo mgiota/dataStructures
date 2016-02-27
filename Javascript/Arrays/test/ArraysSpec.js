@@ -427,3 +427,13 @@ describe('difference2', function() {
     expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('removeFalsyValues', function() {
+  it('should remove falsy values from an array', function() {
+    var arr = [NaN, 0, 15, false, -22, '',undefined, 47, null],
+        actual = arrays.removeFalsyValues(arr),
+        expected = [15, -22, 47];
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});
