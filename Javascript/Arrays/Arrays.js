@@ -352,3 +352,7 @@ exports.flattenNestedArr = function(arr, shallow, res) {
   }
   return res;
 };
+
+exports.findMaxOfArray = function(arr) {
+  return Math.max.apply(null, arr);
+};

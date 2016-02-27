@@ -369,3 +369,11 @@ describe('flattenNestedArr', function() {
     console.log(actual);
   });
 });
+
+describe('findMaxOfArray', function() {
+  it('should return the max element of an array', function() {
+    var arr = [-3, 2, 4, 1, 23, 434, 78];
+
+    expect(arrays.findMaxOfArray(arr)).to.equal(434);
+  });
+});
