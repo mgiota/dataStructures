@@ -462,3 +462,24 @@ exports.propertyValue = function(arr, prop) {
 
   return res;
 };
+
+exports.complementaryPairs = function(arr, sum) {
+  var obj = {},
+      count = 0;
+  for(var i = 0; i < arr.length; i++) {
+    if(obj[arr[i]] in obj) {
+      obj[arr[i]] += 1;   
+    } else {
+      obj[arr[i]] = 1;
+    }
+  }
+
+  for(var i = 0; i < arr.length; i++) {
+    var toCheck = sum - arr[i];
+    if(toCheck in obj) {
+      count+= obj[toCheck];
+    }
+  }
+
+  return count;
+};

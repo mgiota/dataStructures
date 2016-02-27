@@ -463,3 +463,12 @@ describe('propertyValue', function() {
     console.log(arrays.propertyValue(library, 'libraryID'));
   });
 });
+
+describe('complementaryPairs', function() {
+  it('should return number of K-complementary pairs in an array', function() {
+    var arr = [1, 8, -3, 0, 1, 3, -2, 4, 5];
+    console.log(arrays.complementaryPairs(arr, 6));
+
+    expect(arrays.complementaryPairs(arr, 6)).to.equal(7);
+  });
+});
