@@ -559,3 +559,16 @@ exports.prefillStringArray = function(n, val) {
 exports.prefillNumericArray = function(n, val) {
   return Array.apply(null, Array(n)).map(Number.prototype.valueOf, val);
 };
+
+exports.arrayNumberRange = function(start, end, step) {
+  var len = Math.floor((end - start + 1) / step);
+
+  var arr = Array.apply(null, Array(len));
+
+  arr[0] = start;
+  for(var i = 1; i <= len; i++) {
+    arr[i] = arr[i - 1] + step;
+  }
+
+  return arr;
+};

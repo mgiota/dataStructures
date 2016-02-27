@@ -533,3 +533,9 @@ describe('prefillNumericArray', function() {
     console.log(arrays.prefillNumericArray(5, 1));
   });
 });
+
+describe('arrayNumberRange', function() {
+  it('should fill an array with numeric values on supplied bounds', function () {
+    console.log(arrays.arrayNumberRange(0, 25, 5));
+  });
+});
