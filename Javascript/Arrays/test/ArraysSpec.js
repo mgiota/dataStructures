@@ -351,3 +351,21 @@ describe('findDuplicates', function() {
     expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('flattenNestedArr', function() {
+  it('should flatten a nested array without passing shallow', function() {
+    var arr = [1, [2], [3, 4], [5, 6]],
+        expected = [1, 2, 3, 4, 5, 6],
+        actual = arrays.flattenNestedArr(arr);
+
+    expect(arraysEqual(actual, expected)).to.equal(true);  
+  });
+
+  it('should flatten a single level if we pass shallow', function() {
+     var arr = [1, [2], [3, [[4]]], [5, 6]],
+        expected = [1, 2, 3, 4, 5, 6],
+        actual = arrays.flattenNestedArr(arr, true);
+
+    console.log(actual);
+  });
+});

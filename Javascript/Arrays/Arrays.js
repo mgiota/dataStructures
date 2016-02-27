@@ -333,3 +333,22 @@ exports.findDuplicates = function(arr) {
 
   return duplicates;
 };
+
+exports.flattenNestedArr = function(arr, shallow, res) {
+  if (! res) {
+    res = [];
+  }
+
+  if(shallow) {
+    return res.concat.apply(res, arr);
+  }
+
+  for(var i = 0; i < arr.length; i++) {
+    if(toString.call(arr[i]) === '[object Array]') {
+      exports.flattenNestedArr(arr[i], shallow, res);
+    } else {
+      res.push(arr[i]);
+    }
+  }
+  return res;
+};
