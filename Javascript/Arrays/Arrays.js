@@ -283,3 +283,45 @@ exports.binarySearch = function(arr, n) {
 
   return false;
 };
+
+exports.sumOfArrays = function(arr1, arr2) {
+  var len1 = arr1.length,
+      len2 = arr2.length,
+      maxLen = Math.max(len1, len2),
+      minLen = Math.min(len1, len2),
+      sum = [],
+      maxArr;
+  if(len1 < len2) {
+    maxArr = arr2;
+  } else {
+    maxArr = arr1;
+  }
+  for(var i = 0; i < maxLen; i++) {
+    if(i < minLen) {
+      sum.push(arr1[i] + arr2[i]);
+    } else {
+      sum.push(maxArr[i]);
+    }
+  }
+
+  return sum;
+};
+
+exports.sumOfArrays2 = function(arr1, arr2) {
+  var len1 = arr1.length,
+      len2 = arr2.length,
+      maxLen = Math.max(len1, len2),
+      sum = [];
+
+  for(var i = 0; i < maxLen; i++) {
+    if(typeof arr1[i] === 'undefined') {
+      arr1[i] = 0;
+    } else if(typeof arr2[i] === 'undefined') {
+      arr2[i] = 0;
+    }
+
+    sum.push(arr1[i] + arr2[i]);
+  }
+
+  return sum;
+};

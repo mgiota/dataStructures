@@ -284,4 +284,60 @@ describe('binarySearch', function() {
 
 
   });
-})
+});
+
+describe('sumOfArrays', function() {
+  it('should compute the sum of equal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4],
+        arr2 = [3, 5, 6, 7, 8],
+        expected = [4, 5, 8, 10, 12],
+        actual = arrays.sumOfArrays(arr1, arr2);
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+
+  it('should compute the sum of unequal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4],
+        arr2 = [3, 5, 6, 7, 8, 13],
+        expected = [4, 5, 8, 10, 12, 13],
+        actual = arrays.sumOfArrays(arr1, arr2);
+    console.log(actual);
+    expect(arraysEqual(expected, actual)).to.equal(true);
+  });
+
+  it('should compute the sum of unequal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4, 12, 3, 4, 5],
+        arr2 = [3, 5, 6, 7, 8],
+        expected = [4, 5, 8, 10, 12, 12, 3, 4, 5],
+        actual = arrays.sumOfArrays(arr1, arr2);
+    expect(arraysEqual(expected, actual)).to.equal(true);
+  });
+});
+
+describe('sumOfArrays2', function() {
+  it('should compute the sum of equal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4],
+        arr2 = [3, 5, 6, 7, 8],
+        expected = [4, 5, 8, 10, 12],
+        actual = arrays.sumOfArrays2(arr1, arr2);
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+
+  it('should compute the sum of unequal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4],
+        arr2 = [3, 5, 6, 7, 8, 13],
+        expected = [4, 5, 8, 10, 12, 13],
+        actual = arrays.sumOfArrays2(arr1, arr2);
+    console.log(actual);
+    expect(arraysEqual(expected, actual)).to.equal(true);
+  });
+
+  it('should compute the sum of unequal size arrays', function() {
+    var arr1 = [1, 0, 2, 3, 4, 12, 3, 4, 5],
+        arr2 = [3, 5, 6, 7, 8],
+        expected = [4, 5, 8, 10, 12, 12, 3, 4, 5],
+        actual = arrays.sumOfArrays2(arr1, arr2);
+    expect(arraysEqual(expected, actual)).to.equal(true);
+  });
+});
