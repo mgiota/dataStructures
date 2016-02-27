@@ -425,8 +425,8 @@ exports.difference2 = function(arr1, arr2) {
 };
 
 exports.removeFalsyValues = function(arr) {
-  var res = [],
-      index = 0;
+  var res = [];
+
   for(var i = 0; i < arr.length; i++) {
     var value = arr[i];
     if(value) {
@@ -523,5 +523,31 @@ exports.arrayRange = function(start, len) {
     arr[i] = start;
   }
 
+  return arr;
+};
+
+exports.move = function(arr, pos1, pos2) {
+  var elem = arr[pos1],
+      res = [];
+
+  for(var i = 0; i < pos1; i++) {
+    res.push(arr[i]);
+  }
+
+  for(var i = pos1 + 1; i <= pos2; i++) {
+    res.push(arr[i]);
+  }
+
+  res.push(elem);
+
+  for(var i = pos2 + 1; i < arr.length; i++) {
+    res.push(arr[i]);
+  }
+
+  return res;
+};
+
+exports.move2 = function(arr, pos1, pos2) {
+  arr.splice(pos2, 0, arr.splice(pos1, 1)[0]);
   return arr;
 };

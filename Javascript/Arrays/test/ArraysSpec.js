@@ -509,3 +509,15 @@ describe('arrayRange', function() {
     expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('move', function() {
+  it('should move an array element from one position to another', function() {
+    console.log(arrays.move([10, 20, 30, 40, 50], 0, 2));
+  });
+});
+
+describe('move2', function() {
+  it('should move an array element from one position to another', function() {
+    console.log(arrays.move2([10, 20, 30, 40, 50], 0, 2));
+  });
+});
