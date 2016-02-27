@@ -555,3 +555,7 @@ exports.move2 = function(arr, pos1, pos2) {
 exports.prefillStringArray = function(n, val) {
   return Array.apply(null, Array(n)).map(String.prototype.valueOf, val);
 };
+
+exports.prefillNumericArray = function(n, val) {
+  return Array.apply(null, Array(n)).map(Number.prototype.valueOf, val);
+};

@@ -527,3 +527,9 @@ describe('prefillStringArray', function() {
     console.log(arrays.prefillStringArray(5, "test"));
   });
 });
+
+describe('prefillNumericArray', function() {
+  it('should prefill array with default string value', function() {
+    console.log(arrays.prefillNumericArray(5, 1));
+  });
+});
