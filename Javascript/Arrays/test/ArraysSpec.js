@@ -341,3 +341,13 @@ describe('sumOfArrays2', function() {
     expect(arraysEqual(expected, actual)).to.equal(true);
   });
 });
+
+describe('findDuplicates', function() {
+  it('should find duplicates in an array', function() {
+    var arr = [1, 2, 5, 2, 3, 4, 5, 6, 1],
+        actual = arrays.findDuplicates(arr),
+        expected = [2, 5, 1];
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});

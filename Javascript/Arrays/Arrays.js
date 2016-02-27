@@ -325,3 +325,11 @@ exports.sumOfArrays2 = function(arr1, arr2) {
 
   return sum;
 };
+
+exports.findDuplicates = function(arr) {
+  var duplicates = arr.filter(function(elem, pos){
+    return arr.indexOf(elem) !== pos
+  });
+
+  return duplicates;
+};
