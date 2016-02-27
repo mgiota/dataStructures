@@ -272,3 +272,16 @@ describe('leapYearRange', function() {
     expect(arraysEqual(expected, actual)).to.equal(true);
   }); 
 });
+
+describe('binarySearch', function() {
+  it('should find the position of a specified input value within an array sorted by key value', function() {
+    var arr = [1, 2, 3, 4, 5, 7, 8, 9];
+
+    expect(arrays.binarySearch(arr, 4)).to.equal(3);
+    expect(arrays.binarySearch(arr, 1)).to.equal(0);
+    expect(arrays.binarySearch(arr, 9)).to.equal(7);
+    expect(arrays.binarySearch(arr, 5)).to.equal(4);
+
+
+  });
+})

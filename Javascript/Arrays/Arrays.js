@@ -264,3 +264,22 @@ exports.leapYearRange = function(start, end) {
 
   return leapYears;
 };
+
+exports.binarySearch = function(arr, n) {
+  var start = 0,
+      end = arr.length - 1,
+      middle;
+
+  while(start <= end) {
+    middle = Math.floor((start + end) / 2);
+    if (arr[middle] === n) {
+      return middle;
+    } else if (arr[middle] > n) {
+      end = middle - 1;
+    } else {
+      start = middle + 1;
+    }
+  }
+
+  return false;
+};
