@@ -482,3 +482,21 @@ describe('longestCommonSubstring', function() {
     expect(actual).to.equal(expected);
   });
 });
+
+describe('generateArray', function() {
+  it('should generate an array between 2 integers', function() {
+    var actual = arrays.generateArray(4, 7),
+        expected = [4, 5, 6, 7];
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});
+
+describe('generateArray2', function() {
+  it('should generate an array between 2 integers', function() {
+    var actual = arrays.generateArray2(4, 7),
+        expected = [4, 5, 6, 7];
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});

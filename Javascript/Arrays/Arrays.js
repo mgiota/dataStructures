@@ -495,3 +495,24 @@ exports.longestCommonSubstring = function(arr) {
 
   return a1.substring(0, i); 
 };
+
+exports.generateArray = function(s, e) {
+  var res = [],
+      index = 0;
+  for(var i = s; i <= e; i++) {
+    res[index] = i;
+    index++;
+  }
+
+  return res;
+};
+
+exports.generateArray2 = function(start, end) {
+  var arr = new Array(end - start + 1);
+
+  for(var i = 0; i < arr.length; i++, start++) {
+    arr[i] = start;
+  }
+
+  return arr;
+};
