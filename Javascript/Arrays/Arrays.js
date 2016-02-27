@@ -357,6 +357,7 @@ exports.findMaxOfArray = function(arr) {
   return Math.max.apply(null, arr);
 };
 
+//http://www.2ality.com/2012/07/apply-tricks.html
 exports.fillHoles = function() {
   function returnArgs() {
     return Array.prototype.slice.call(arguments);
@@ -394,3 +395,31 @@ exports.union2 = function(arr1, arr2) {
   return res;
 };
 
+exports.difference = function(arr1, arr2) {
+  var a = [],
+      diff = [];
+
+  for(var i = 0; i < arr1.length; i++) {
+    a[arr1[i]] = true;
+  }
+
+  for(var i = 0; i < arr2.length; i++) {
+    if(a[arr2[i]]) {
+      delete a[arr2[i]];
+    } else {
+      a[arr2[i]] = true;
+    }
+  }
+
+  for(var k in a) {
+    diff.push(parseInt(k, 10));
+  }
+
+  return diff;
+};
+
+exports.difference2 = function(arr1, arr2) {
+  return arr1.filter(function(elem) {
+    return arr2.indexOf(elem) < 0;
+  });
+};

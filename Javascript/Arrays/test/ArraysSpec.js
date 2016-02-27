@@ -406,3 +406,24 @@ describe('union2', function() {
     expect(arraysEqual(union, expected)).to.equal(true);
   });
 });
+
+describe('difference', function() {
+  it('should compute the difference between 2 arrays', function() {
+    var arr1 = [1, 2, 3, 8],
+        arr2 = [12, 2, 1, 10],
+        actual = arrays.difference(arr1, arr2),
+        expected = [3, 8, 10, 12];
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});
+
+describe('difference2', function() {
+  it('should compute the difference between 2 arrays when 2nd array doesnt contain extra different elements', function() {
+    var arr1 = [1, 2, 3, 8],
+        arr2 = [2, 8],
+        actual = arrays.difference2(arr1, arr2),
+        expected = [1, 3];
+    console.log(actual);
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});
