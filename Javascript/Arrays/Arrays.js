@@ -364,3 +364,33 @@ exports.fillHoles = function() {
 
   return returnArgs.apply(null, [1,,2]);
 };
+
+exports.union = function(arr1, arr2) {
+  var union = arr1.concat(arr2);
+
+  return exports.removeDuplicates(union);
+};
+
+exports.union2 = function(arr1, arr2) {
+  if((arr1 === null) || (arr2 === null)) {
+    return void 0;
+  }
+
+  var obj = {},
+      res = [],
+      i;
+
+  for(i=0; i < arr1.length; i++) {
+    obj[arr1[i]] = arr1[i]; 
+  }
+
+  for(i=0; i < arr2.length; i++) {
+    obj[arr2[i]] = arr2[i];
+  }
+
+  for(i in obj) {
+    res.push(obj[i]);
+  }
+  return res;
+};
+

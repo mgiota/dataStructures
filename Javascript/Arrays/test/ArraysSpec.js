@@ -383,3 +383,26 @@ describe('fillHoles', function() {
     console.log(arrays.fillHoles());
   });
 });
+
+describe('union', function() {
+  it('should compute the union of 2 arrays', function() {
+    var arr1 = [1, 2, 3],
+        arr2 = [100, 2, 1, 10],
+        union = arrays.union(arr1, arr2),
+        expected = [1, 2, 3, 100, 10];
+
+    expect(arraysEqual(union, expected)).to.equal(true);
+  });
+});
+
+describe('union2', function() {
+  it('should compute the union of 2 arrays', function() {
+    var arr1 = [1, 2, 3],
+        arr2 = [100, 2, 1, 10],
+        union = arrays.union2(arr1, arr2),
+        expected = [1, 2, 3, 10, 100];
+    console.log(union);
+
+    expect(arraysEqual(union, expected)).to.equal(true);
+  });
+});
