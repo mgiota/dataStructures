@@ -609,3 +609,8 @@ exports.contains = function(arr, value) {
     return false;
   }
 };
+
+exports.emptyArray = function(arr) {
+  arr.length = 0;
+  return arr;
+};

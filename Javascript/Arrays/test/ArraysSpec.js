@@ -567,6 +567,11 @@ describe('contains', function() {
   it('should return if an array contains a specific element', function() {
     expect(arrays.contains([2, 5, 9, 6], 12)).to.equal(false);
     expect(arrays.contains([2, 5, 9, 6], 5)).to.equal(true);
+  });
+});
 
+describe('emptyArray', function() {
+  it('should empty an array', function() {
+    expect(arrays.emptyArray([1, 2, 3, 4, 5]).length).to.equal(0);
   });
 });
