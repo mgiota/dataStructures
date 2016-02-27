@@ -539,3 +539,14 @@ describe('arrayNumberRange', function() {
     console.log(arrays.arrayNumberRange(0, 25, 5));
   });
 });
+
+describe('mergeArrays', function() {
+  it('should merge 2 arrays and remove duplicates', function() {
+    var arr1 = [1, 2, 3],
+        arr2 = [2, 30, 1],
+        actual = arrays.mergeArrays(arr1, arr2),
+        expected = [1, 2, 3, 30];
+
+  expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});

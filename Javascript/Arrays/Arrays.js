@@ -572,3 +572,13 @@ exports.arrayNumberRange = function(start, end, step) {
 
   return arr;
 };
+
+exports.mergeArrays = function(arr1, arr2) {
+  var arr = arr1.concat(arr2);
+
+  arr = arr.filter(function(elem, pos) {
+    return arr.indexOf(elem) === pos;
+  });
+
+  return arr;
+}
