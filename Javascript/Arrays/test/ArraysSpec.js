@@ -450,3 +450,16 @@ describe('sortArrayOfObjects', function() {
     console.log(sorted);
   });
 });
+
+describe('propertyValue', function() {
+  it('should retrieve the value of a given property from all elements in an array', function() {
+    var library = [ 
+     { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+     { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+     { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games'}
+    ];
+
+    console.log(arrays.propertyValue(library, 'title'));
+    console.log(arrays.propertyValue(library, 'libraryID'));
+  });
+});

@@ -450,3 +450,15 @@ exports.sortArrayOfObjects = function(arr) {
 
   return arr.sort(byTitle);
 };
+
+exports.propertyValue = function(arr, prop) {
+  var res = [];
+
+  for(var i=0; i < arr.length; i++) {
+    if(arr[i].hasOwnProperty(prop)) {
+      res.push(arr[i][prop]);
+    }
+  }
+
+  return res;
+};
