@@ -516,3 +516,12 @@ exports.generateArray2 = function(start, end) {
 
   return arr;
 };
+
+exports.arrayRange = function(start, len) {
+  var arr = new Array(len);
+  for(var i = 0; i < len; i++, start++) {
+    arr[i] = start;
+  }
+
+  return arr;
+};

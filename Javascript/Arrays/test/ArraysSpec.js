@@ -500,3 +500,12 @@ describe('generateArray2', function() {
     expect(arraysEqual(actual, expected)).to.equal(true);
   });
 });
+
+describe('arrayRange', function() {
+  it('should generate an array of specified length', function() {
+    var actual = arrays.arrayRange(4, 2),
+        expected = [4, 5];
+
+    expect(arraysEqual(actual, expected)).to.equal(true);
+  });
+});
