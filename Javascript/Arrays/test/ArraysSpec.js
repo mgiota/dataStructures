@@ -562,3 +562,11 @@ describe('removeElement2', function() {
     console.log(arrays.removeElement2([2, 5, 9, 6], 5));
   });
 });
+
+describe('contains', function() {
+  it('should return if an array contains a specific element', function() {
+    expect(arrays.contains([2, 5, 9, 6], 12)).to.equal(false);
+    expect(arrays.contains([2, 5, 9, 6], 5)).to.equal(true);
+
+  });
+});

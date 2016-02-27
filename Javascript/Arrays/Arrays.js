@@ -600,3 +600,12 @@ exports.removeElement2 = function(arr, value) {
   }
   return arr;
 };
+
+exports.contains = function(arr, value) {
+  var index = arr.indexOf(value);
+  if (index > -1) {
+    return true;
+  } else {
+    return false;
+  }
+};
