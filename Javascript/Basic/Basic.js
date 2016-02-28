@@ -26,3 +26,8 @@ exports.currentDate = function() {
 
   return today;
 };
+
+exports.getWebsiteUrl = function() {
+  return document.URL;
+  //or return window.location
+};
