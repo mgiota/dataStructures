@@ -7,3 +7,7 @@ exports.isString = function(input) {
 exports.isBlank = function(input) {
   return input.length === 0;
 };
+
+exports.stringToArray = function(str) {
+  return str.trim().split(' ');
+};
