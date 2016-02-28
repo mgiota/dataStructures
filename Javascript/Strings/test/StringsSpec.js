@@ -35,3 +35,9 @@ describe('stringToArray', function() {
     expect(areEquals(actual, expected)).to.equal(true);
   });
 });
+
+describe('truncate', function() {
+  it('should remove specified number of characters from a string', function() {
+    expect(strings.truncate("Hello World", 5)).to.equal("Hello");
+  });
+});

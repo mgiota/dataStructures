@@ -11,3 +11,10 @@ exports.isBlank = function(input) {
 exports.stringToArray = function(str) {
   return str.trim().split(' ');
 };
+
+exports.truncate = function(str, len) {
+  if((str.constructor === String) && (len > 0)) {
+    return str.slice(0, len);
+  }
+  return str;
+};
