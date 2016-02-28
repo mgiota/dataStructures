@@ -47,3 +47,9 @@ describe('abbrevName', function() {
     expect(strings.abbrevName("Martin Mueller")).to.equal('Martin M.');
   });
 });
+
+describe('capitalize', function() {
+  it('should capitalize a string', function() {
+    expect(strings.capitalize("martin")).to.equal('Martin');
+  });
+});

@@ -27,3 +27,7 @@ exports.abbrevName = function(str) {
 
   return arr[0];
 };
+
+exports.capitalize = function(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
