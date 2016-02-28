@@ -18,3 +18,12 @@ exports.truncate = function(str, len) {
   }
   return str;
 };
+
+exports.abbrevName = function(str) {
+  var arr = str.trim().split(" ");
+  if(arr.length > 1) {
+    return arr[0] + ' ' + arr[1].charAt(0) + '.';
+  }
+
+  return arr[0];
+};

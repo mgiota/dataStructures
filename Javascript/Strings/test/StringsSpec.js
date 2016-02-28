@@ -41,3 +41,9 @@ describe('truncate', function() {
     expect(strings.truncate("Hello World", 5)).to.equal("Hello");
   });
 });
+
+describe('abbrevName', function() {
+  it('should return abbreviated name', function() {
+    expect(strings.abbrevName("Martin Mueller")).to.equal('Martin M.');
+  });
+});
