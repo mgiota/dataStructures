@@ -53,3 +53,9 @@ describe('capitalize', function() {
     expect(strings.capitalize("martin")).to.equal('Martin');
   });
 });
+
+describe('capitalizeWords', function() {
+  it('should capitalize a string', function() {
+    expect(strings.capitalizeWords("js string exercises")).to.equal('Js String Exercises');
+  });
+});

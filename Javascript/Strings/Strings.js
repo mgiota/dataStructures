@@ -31,3 +31,12 @@ exports.abbrevName = function(str) {
 exports.capitalize = function(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
+
+exports.capitalizeWords = function(str) {
+  var arr = str.trim().split(" ");
+  for(var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
+
+  return arr.join(" ");
+};
