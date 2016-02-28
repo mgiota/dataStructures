@@ -614,3 +614,8 @@ exports.emptyArray = function(arr) {
   arr.length = 0;
   return arr;
 };
+
+exports.randomItem = function(arr) {
+  var len = arr.length;
+  return arr[Math.floor(Math.random() * len)];
+};

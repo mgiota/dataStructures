@@ -575,3 +575,9 @@ describe('emptyArray', function() {
     expect(arrays.emptyArray([1, 2, 3, 4, 5]).length).to.equal(0);
   });
 });
+
+describe('random item', function() {
+  it('should return a random item from an array', function() {
+    console.log(arrays.randomItem([1, 2, 5, 3, 9]));
+  });
+}); 
