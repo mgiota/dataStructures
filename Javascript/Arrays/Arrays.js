@@ -619,3 +619,12 @@ exports.randomItem = function(arr) {
   var len = arr.length;
   return arr[Math.floor(Math.random() * len)];
 };
+
+exports.nthHighest = function(arr, n) {
+  function sortNumericDesc(a, b) {
+    return b - a;
+  }
+
+  arr = arr.sort(sortNumericDesc);
+  return arr[n - 1];
+};
